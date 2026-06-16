@@ -15,15 +15,6 @@ export default function Home() {
   const tickerTweenRef = useRef<gsap.core.Tween | null>(null);
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
-      document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
-  useEffect(() => {
     if (tickerRef.current) {
       const targets = tickerRef.current.querySelectorAll('.ticker-inner');
       gsap.set(targets, { xPercent: -100 });
@@ -111,34 +102,7 @@ export default function Home() {
           />
           <div className="hero-gradient-overlay"></div>
           
-          {/* Dynamic Glow Layer highlights to add life & depth */}
-          <div className="hero-glow-effect"></div>
-          <div 
-            style={{
-              position: 'absolute',
-              top: '20%',
-              left: '15%',
-              width: '300px',
-              height: '300px',
-              background: 'radial-gradient(circle, rgba(243, 178, 82, 0.08) 0%, transparent 70%)',
-              filter: 'blur(50px)',
-              pointerEvents: 'none',
-              animation: 'pulseGlowBig 7s infinite alternate'
-            }}
-          />
-          <div 
-            style={{
-              position: 'absolute',
-              bottom: '20%',
-              right: '15%',
-              width: '350px',
-              height: '350px',
-              background: 'radial-gradient(circle, rgba(236, 72, 153, 0.04) 0%, transparent 70%)',
-              filter: 'blur(60px)',
-              pointerEvents: 'none',
-              animation: 'pulseGlowBig 9s infinite alternate-reverse'
-            }}
-          />
+
         </div>
 
         <div className="hero-content container">
