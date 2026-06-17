@@ -162,56 +162,142 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 2 — UPCOMING EVENT (TECHNOWOOD SPOTLIGHT) */}
-      <section className="section-spotlight" id="upcoming-highlight" style={{ marginTop: 0 }}>
-        <div className="ambient-glow-bg"></div>
-        <div className="container spotlight-grid">
-          <framerMotion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="spotlight-content"
-          >
-            <span className="spotlight-tag" style={{ paddingTop: '6px'}} >UPCOMING EVENT</span>
-            <h2 className="spotlight-title text-gradient-gold">TECHNOWOOD</h2>
-            <p className="spotlight-genres">Bollywood • Punjabi • Techno • Hard Techno</p>
-            
-            <div className="spotlight-meta">
-              <div className="meta-item">
-                <span className="meta-icon"><Clock size={20} /></span>
-                <span>12 June 2026</span>
-              </div>
-              <div className="meta-item">
-                <span className="meta-icon"><Compass size={20} /></span>
-                <span>Chaise Lounge, Melbourne</span>
-              </div>
-              <div className="meta-item">
-                <span className="meta-icon"><Ticket size={20} /></span>
-                <span style={{ fontWeight: 600 }}>Limited Capacity</span>
-              </div>
+      {/* SECTION 2 — UPCOMING EVENT (DYNAMIC SPOTLIGHT) */}
+      {(() => {
+        // Defined inline event data mirroring the master events source
+        const eventsList = [
+          {
+            title: 'OBSIDIAN NIGHTS',
+            dateStr: '04 July 2026',
+            dateValue: '2026-07-04',
+            venue: 'The Night Cat, Melbourne',
+            genres: 'Afro House • Melodic Techno • R&B',
+            image: '/gallery_lasers.jpg',
+            status: 'Tickets Selling Fast',
+            ticketLink: 'https://www.eventbrite.com.au'
+          },
+          {
+            title: 'TECHNOWOOD',
+            dateStr: '12 June 2026',
+            dateValue: '2026-06-12',
+            venue: 'Chaise Lounge, Melbourne',
+            genres: 'Bollywood • Punjabi • Techno • Hard Techno',
+            image: '/technowood_poster.jpeg',
+            status: 'Completed'
+          },
+          {
+            title: 'KULTURE HOUSE OUTDOOR FEST',
+            dateStr: '15 August 2026',
+            dateValue: '2026-08-15',
+            venue: 'Riviera Beach Club, Melbourne',
+            genres: 'Bollywood • Punjabi • Afro • House • Techno',
+            image: '/bolly_to_find.jpeg',
+            status: 'Pre-sale Active',
+            ticketLink: 'https://www.eventbrite.com.au'
+          },
+          {
+            title: 'FRIDAY AFFAIR',
+            dateStr: '15 May 2026',
+            dateValue: '2026-05-15',
+            venue: 'Inflation Nightclub, Melbourne',
+            genres: 'Bollywood • Punjabi • R&B • UK Punjabi',
+            image: '/about_crowd.jpg',
+            status: 'Completed'
+          },
+          {
+            title: 'BOLLYWOOD BASS SYNDICATE',
+            dateStr: '05 September 2026',
+            dateValue: '2026-09-05',
+            venue: 'Brown Alley, Melbourne',
+            genres: 'Bollywood Bass • Trap • Hip-Hop • Punjabi',
+            image: '/Bollywood_poster.jpeg',
+            status: 'Announced',
+            ticketLink: 'https://www.eventbrite.com.au'
+          }
+        ];
+
+        // Current time threshold is 2026-06-17
+        const today = new Date('2026-06-17');
+
+        // Find upcoming events (sorted ascending by date)
+        const upcomingEvents = eventsList
+          .filter(e => new Date(e.dateValue) >= today)
+          .sort((a, b) => new Date(a.dateValue).getTime() - new Date(b.dateValue).getTime());
+
+        // Find past events (sorted descending by date to get the most recent past one)
+        const pastEvents = eventsList
+          .filter(e => new Date(e.dateValue) < today)
+          .sort((a, b) => new Date(b.dateValue).getTime() - new Date(a.dateValue).getTime());
+
+        // Target event: Show next upcoming event; if none, fallback to the latest completed event
+        const targetEvent = upcomingEvents.length > 0 ? upcomingEvents[0] : pastEvents[0];
+
+        if (!targetEvent) return null;
+
+        const isPast = new Date(targetEvent.dateValue) < today;
+
+        return (
+          <section className="section-spotlight" id="upcoming-highlight" style={{ marginTop: 0 }}>
+            <div className="ambient-glow-bg"></div>
+            <div className="container spotlight-grid">
+              <framerMotion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={fadeInUp}
+                className="spotlight-content"
+              >
+                <span className="spotlight-tag" style={{ paddingTop: '6px' }}>
+                  {isPast ? 'RECENT EVENT' : 'UPCOMING EVENT'}
+                </span>
+                <h2 className="spotlight-title text-gradient-gold">{targetEvent.title}</h2>
+                <p className="spotlight-genres">{targetEvent.genres}</p>
+                
+                <div className="spotlight-meta">
+                  <div className="meta-item">
+                    <span className="meta-icon"><Clock size={20} /></span>
+                    <span>{targetEvent.dateStr}</span>
+                  </div>
+                  <div className="meta-item">
+                    <span className="meta-icon"><Compass size={20} /></span>
+                    <span>{targetEvent.venue}</span>
+                  </div>
+                  <div className="meta-item">
+                    <span className="meta-icon"><Ticket size={20} /></span>
+                    <span style={{ fontWeight: 600 }}>
+                      {isPast ? 'COMPLETED' : targetEvent.status}
+                    </span>
+                  </div>
+                </div>
+
+                {!isPast && targetEvent.ticketLink ? (
+                  <a href={targetEvent.ticketLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                    GET TICKETS <ArrowRight size={16} />
+                  </a>
+                ) : (
+                  <span className="btn btn-outline" style={{ opacity: 0.5, cursor: 'default', pointerEvents: 'none' }}>
+                    SESSION COMPLETED
+                  </span>
+                )}
+              </framerMotion.div>
+
+              <framerMotion.div 
+                initial={{ opacity: 0, scale: 0.98 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="spotlight-poster"
+              >
+                <img 
+                  src={targetEvent.image} 
+                  alt={`${targetEvent.title} Event Poster`} 
+                  style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '4px', border: '1px solid var(--color-glass-border)' }} 
+                />
+              </framerMotion.div>
             </div>
-
-            <a href="https://www.eventbrite.com.au" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              GET TICKETS <ArrowRight size={16} />
-            </a>
-          </framerMotion.div>
-
-          <framerMotion.div 
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="spotlight-poster"
-          >
-            <img 
-              src="/technowood_poster.jpeg" 
-              alt="Technowood Event Poster" 
-              style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '4px', border: '1px solid var(--color-glass-border)' }} 
-            />
-          </framerMotion.div>
-        </div>
-      </section>
+          </section>
+        );
+      })()}
 
       {/* SECTION 3 — ABOUT KULTURE HOUSE (EDITORIALIZED HIGHLIGHTS) */}
       <section className="section-about">
