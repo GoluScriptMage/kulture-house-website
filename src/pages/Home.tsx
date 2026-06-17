@@ -173,7 +173,7 @@ export default function Home() {
             variants={fadeInUp}
             className="spotlight-content"
           >
-            <span className="spotlight-tag">UPCOMING EVENT</span>
+            <span className="spotlight-tag" style={{ paddingTop: '6px'}} >UPCOMING EVENT</span>
             <h2 className="spotlight-title text-gradient-gold">TECHNOWOOD</h2>
             <p className="spotlight-genres">Bollywood • Punjabi • Techno • Hard Techno</p>
             
@@ -204,7 +204,11 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="spotlight-poster"
           >
-            <div className="spotlight-poster-placeholder" />
+            <img 
+              src="/technowood_poster.jpeg" 
+              alt="Technowood Event Poster" 
+              style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '4px', border: '1px solid var(--color-glass-border)' }} 
+            />
           </framerMotion.div>
         </div>
       </section>
