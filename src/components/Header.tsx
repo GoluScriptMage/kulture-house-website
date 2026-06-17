@@ -74,6 +74,7 @@ export default function Header() {
           aria-label="Toggle Navigation"
           aria-expanded={isOpen}
         >
+          <span className="menu-circle"></span>
           <div className="nav-toggle-box">
             <span></span>
             <span></span>
@@ -83,13 +84,6 @@ export default function Header() {
 
         {/* Navigation Menu - Fullscreen Glassmorphic Overlay for Mobile */}
         <nav className={`nav-menu ${isOpen ? 'open' : ''}`}>
-          {isOpen && isMobile && (
-            <div className="nav-mobile-header">
-              <Link to="/" onClick={closeMenu}>
-                <img src="/logo.png" alt="KULTURE HOUSE Logo" className="header-logo" />
-              </Link>
-            </div>
-          )}
           <ul className="nav-list">
             <li>
               <NavLink 
@@ -99,6 +93,15 @@ export default function Header() {
                 end
               >
                 Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/events" 
+                onClick={closeMenu} 
+                className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+              >
+                Events
               </NavLink>
             </li>
             <li>

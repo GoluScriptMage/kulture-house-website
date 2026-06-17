@@ -10,9 +10,9 @@ export default function Footer() {
           <Link to="/" className="logo-link">
             <img src="/logo.png" alt="KULTURE HOUSE Logo" className="footer-logo" />
           </Link>
-          <span className="footer-tagline">South Asian Events • Entertainment • Nightlife</span>
+          <span className="footer-tagline">South Asian Music • Entertainment • Nightlife</span>
           <p style={{ fontSize: '0.85rem', lineHeight: '1.6', maxWidth: '350px' }}>
-            Creating unforgettable experiences through music, energy and atmosphere.
+            Bringing people together through music, entertainment, and unforgettable experiences.
           </p>
         </div>
 
@@ -21,6 +21,7 @@ export default function Footer() {
           <h3>Quick Links</h3>
           <nav className="footer-nav">
             <Link to="/" className="footer-nav-item">Home</Link>
+            <Link to="/events" className="footer-nav-item">Events</Link>
             <Link to="/gallery" className="footer-nav-item">Gallery</Link>
             <Link to="/about" className="footer-nav-item">About</Link>
             <Link to="/contact" className="footer-nav-item">Contact</Link>
@@ -37,7 +38,7 @@ export default function Footer() {
           
           <div className="footer-social-icons">
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/kulturehouse.au" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon-link glass-card"
@@ -50,7 +51,7 @@ export default function Footer() {
               </svg>
             </a>
             <a 
-              href="https://tiktok.com" 
+              href="https://www.tiktok.com/@kulturehouse.au" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon-link glass-card"
@@ -70,7 +71,7 @@ export default function Footer() {
               </svg>
             </a>
             <a 
-              href="https://facebook.com" 
+              href="https://www.facebook.com/kulturehouse.au" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon-link glass-card"

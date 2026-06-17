@@ -355,22 +355,22 @@ section {
   display: none !important;
 }
 
-.header-logo {
-  height: 160px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: height, transform;
-}
+  .header-logo {
+    height: 200px; /* larger premium logo */
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: height, transform;
+  }
 
-.header-logo:hover {
-  transform: scale(1.02);
-}
+  .header-logo:hover {
+    transform: scale(1.02);
+  }
 
-.site-header.scrolled .header-logo {
-  height: 100px;
-}
+  .site-header.scrolled .header-logo {
+    height: 120px; /* reduced but still prominent when scrolled */
+  }
 
 .nav-menu {
   display: flex;
@@ -459,11 +459,32 @@ section {
   align-items: center;
   width: 42px;
   height: 42px;
+  position: relative; /* added for menu-circle positioning */
   z-index: 120; /* Keep it above the fullscreen drawer */
   border: none;
   background: transparent;
   transition: all var(--transition-normal);
   will-change: transform;
+}
+
+/* Circular decorative element behind the hamburger */
+.menu-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  opacity: 0.6;
+  animation: pulse 2s ease-in-out infinite;
+  z-index: -1; /* place behind the three lines */
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.3; }
 }
 
 .nav-toggle-box {
@@ -604,8 +625,8 @@ section {
     height: 85px;
   }
 
-  .nav-mobile-header .header-logo {
-    height: 195px !important; /* Ensure premium size on mobile open menu */
+    .nav-mobile-header .header-logo {
+    height: 210px !important; /* Premium large logo in mobile menu */
   }
   
   .nav-mobile-header {

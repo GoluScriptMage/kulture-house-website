@@ -63,20 +63,24 @@ export default function Home() {
 
   const faqs: FaqItem[] = [
     {
-      q: 'I am a DJ, artist, or music selector. How do I get booked for a Kulture House event?',
-      a: 'We are constantly scouting for ground-breaking talent. If you specialize in Bollywood, Punjabi, Techno, or Hard Techno, send your press kit and recent mix links to info@kulturehouse.com.au. All submissions are audited by our creative directors.'
+      q: 'How do I purchase tickets?',
+      a: 'Tickets can be purchased through our official ticketing platform. Event links will be available on our website and social media pages.'
     },
     {
-      q: 'What opportunities exist for photographers, videographers, or content creators?',
-      a: 'We offer exclusive media passes and content creation access for visual artists who align with our luxury brand aesthetic. Please email info@kulturehouse.com.au with your portfolio and active social handles to apply for media accreditation.'
+      q: 'What is the entry policy and age requirement?',
+      a: 'KULTURE HOUSE events are strictly 18+. A valid government-issued photo ID is required for entry. Management reserves the right to refuse entry.'
     },
     {
-      q: 'Where do I purchase tickets and is there a strict capacity limit?',
-      a: 'All event tickets are sold exclusively through our official ticketing partner platforms (e.g., Eventbrite). Click the "GET TICKETS" button on any upcoming event block to be directed to the secure page. Tickets are not sold at the door once capacity is reached.'
+      q: 'Are tickets available at the door?',
+      a: 'Door tickets may be available depending on capacity. We recommend purchasing tickets in advance to avoid missing out.'
     },
     {
-      q: 'What is the entry policy, age restriction, and dress code?',
-      a: 'Kulture House events are strict 18+ and require a valid physical photo ID (Driver\'s License, Proof of Age card, or Passport) for entry. The dress code is fashion-forward / smart-casual. Athletic wear, tracksuits, and activewear are not permitted.'
+      q: 'Do you offer VIP packages?',
+      a: 'Yes. VIP packages and table bookings may be available for selected events. Please contact us through our website or social media channels for availability and pricing.'
+    },
+    {
+      q: 'Can I celebrate my birthday at a KULTURE HOUSE event?',
+      a: 'Yes. For birthday bookings, special occasions, or VIP experiences, please contact our team through the website or social media channels.'
     }
   ];
 
@@ -101,8 +105,6 @@ export default function Home() {
             }}
           />
           <div className="hero-gradient-overlay"></div>
-          
-
         </div>
 
         <div className="hero-content container">
@@ -128,7 +130,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="hero-subtitle"
           >
-            South Asian Events • Entertainment • Nightlife
+            South Asian Music • Entertainment • Nightlife
           </framerMotion.p>
           <framerMotion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -152,10 +154,10 @@ export default function Home() {
 
         <div className="hero-ticker-container" ref={tickerRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <div className="ticker-inner">
-            <span>KULTURE HOUSE • BOLLYWOOD • PUNJABI • TECHNO • IMMERSIVE SENSES •&nbsp;</span>
+            <span>Bollywood • Punjabi • R&B • Afro • House • Techno •&nbsp;</span>
           </div>
           <div className="ticker-inner">
-            <span>KULTURE HOUSE • BOLLYWOOD • PUNJABI • TECHNO • IMMERSIVE SENSES •&nbsp;</span>
+            <span>Bollywood • Punjabi • R&B • Afro • House • Techno •&nbsp;</span>
           </div>
         </div>
       </section>
@@ -171,7 +173,7 @@ export default function Home() {
             variants={fadeInUp}
             className="spotlight-content"
           >
-            <span className="spotlight-tag">Next Experience</span>
+            <span className="spotlight-tag">UPCOMING EVENT</span>
             <h2 className="spotlight-title text-gradient-gold">TECHNOWOOD</h2>
             <p className="spotlight-genres">Bollywood • Punjabi • Techno • Hard Techno</p>
             
@@ -230,272 +232,46 @@ export default function Home() {
           >
             <h2 className="text-gradient-rose">What is Kulture House?</h2>
             
-            {/* Quick Information Highlights (Non-wikipedia style) */}
+            {/* Quick Information Highlights */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginTop: '1.5rem', marginBottom: '2rem', textAlign: 'left' }}>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                 <span style={{ color: 'var(--color-primary)', marginTop: '0.2rem' }}><Music size={18} /></span>
                 <div>
-                  <h4 style={{ color: 'var(--color-text-primary)', fontWeight: 600, fontSize: '0.95rem' }}>GENRE-BENDING MUSIC</h4>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>Fusing high-tempo Bollywood and Punjabi vocals with hard underground Techno.</p>
+                  <h4 style={{ color: 'var(--color-text-primary)', fontWeight: 600, fontSize: '0.95rem' }}>PREMIUM EVENTS</h4>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>Creating unique music and nightlife experiences.</p>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                 <span style={{ color: 'var(--color-primary)', marginTop: '0.2rem' }}><Sparkles size={18} /></span>
                 <div>
-                  <h4 style={{ color: 'var(--color-text-primary)', fontWeight: 600, fontSize: '0.95rem' }}>ELITE VISUAL PRODUCTION</h4>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>Custom visual projection screens, lasers, and immersive dynamic lighting.</p>
+                  <h4 style={{ color: 'var(--color-text-primary)', fontWeight: 600, fontSize: '0.95rem' }}>UNFORGETTABLE EXPERIENCES</h4>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>From intimate gatherings to large-scale events, every experience is designed with attention to detail.</p>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                 <span style={{ color: 'var(--color-primary)', marginTop: '0.2rem' }}><Users size={18} /></span>
                 <div>
-                  <h4 style={{ color: 'var(--color-text-primary)', fontWeight: 600, fontSize: '0.95rem' }}>DIVERSE COMMUNITY</h4>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>Bringing thousands of music enthusiasts together under gold-standard hospitality.</p>
+                  <h4 style={{ color: 'var(--color-text-primary)', fontWeight: 600, fontSize: '0.95rem' }}>COMMUNITY DRIVEN</h4>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>Bringing people together through music, entertainment and memorable nights.</p>
                 </div>
               </div>
             </div>
 
-            <Link to="/about" className="btn btn-outline">LEARN MORE</Link>
+            <Link to="/about" className="btn btn-outline">ABOUT US</Link>
           </framerMotion.div>
         </div>
       </section>
 
-      {/* SECTION 4 — OUR EVENTS (BRANDS) */}
-      <section className="section-brands section-dark">
-        <div className="ambient-glow-bg"></div>
-        <div className="container">
-          <div className="section-header">
-            <h2 className="text-gradient-gold">OUR EVENTS</h2>
-            <p style={{ fontSize: '0.9rem' }}>We curate signature event brands, engineered for unforgettable nightlife.</p>
-          </div>
-
-          <framerMotion.div 
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className="brands-grid"
-          >
-            <framerMotion.div 
-              variants={fadeInUp} 
-              className="brand-card glass-card"
-              whileHover={{ y: -6, scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <div className="brand-icon"><Flame size={28} /></div>
-              <h3 style={{ fontSize: '1.2rem' }}>THE FRIDAY AFFAIR</h3>
-              <p className="brand-desc" style={{ fontSize: '0.85rem' }}>
-                High-energy Bollywood and Punjabi club nights setting the weekend standard.
-              </p>
-            </framerMotion.div>
-
-            <framerMotion.div 
-              variants={fadeInUp} 
-              className="brand-card glass-card"
-              whileHover={{ y: -6, scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <div className="brand-icon"><Music size={28} /></div>
-              <h3 style={{ fontSize: '1.2rem' }}>KULTURE PRESENTS</h3>
-              <p className="brand-desc" style={{ fontSize: '0.85rem' }}>
-                Unique concept takeovers blending custom soundscapes and cultural design.
-              </p>
-            </framerMotion.div>
-
-            <framerMotion.div 
-              variants={fadeInUp} 
-              className="brand-card glass-card"
-              whileHover={{ y: -6, scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <div className="brand-icon"><Sparkles size={28} /></div>
-              <h3 style={{ fontSize: '1.2rem' }}>SPECIAL EXPERIENCES</h3>
-              <p className="brand-desc" style={{ fontSize: '0.85rem' }}>
-                New experimental themes, warehouse pop-ups, and legendary tour moments.
-              </p>
-            </framerMotion.div>
-          </framerMotion.div>
-        </div>
-      </section>
-
-      {/* SECTION 5 — UPCOMING EVENTS LIST */}
-      <section className="section-events-list">
-        <div className="ambient-glow-bg"></div>
-        <div className="container">
-          <div className="section-header">
-            <h2 className="text-gradient-rose">UPCOMING EVENTS</h2>
-            <p style={{ fontSize: '0.9rem' }}>Secure tickets early. Capacity limits apply.</p>
-          </div>
-
-          <framerMotion.div 
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="events-list-container"
-          >
-            {/* Event 1 */}
-            <framerMotion.div 
-              variants={fadeInUp} 
-              className="event-row-card glass-card"
-              whileHover={{ y: -6, scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <div className="event-row-date">
-                <span className="event-row-day" style={{ fontSize: '1.8rem' }}>12</span>
-                <span className="event-row-month" style={{ fontSize: '0.75rem' }}>June 2026</span>
-              </div>
-              <div className="event-row-info">
-                <h3 style={{ fontSize: '1.3rem' }}>TECHNOWOOD</h3>
-                <div className="event-row-details">
-                  <span><MapPin size={13} /> Melbourne</span>
-                  <span>•</span>
-                  <span>Bollywood • Punjabi • Techno • Hard Techno</span>
-                </div>
-              </div>
-              <div className="event-row-cta">
-                <a 
-                  href="https://www.eventbrite.com.au" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn btn-primary btn-glow" 
-                  style={{ padding: '0.6rem 1.2rem', fontSize: '0.8rem' }}
-                >
-                  GET TICKETS
-                </a>
-              </div>
-            </framerMotion.div>
-
-            {/* Event 2 */}
-            <framerMotion.div 
-              variants={fadeInUp} 
-              className="event-row-card glass-card" 
-              style={{ opacity: 0.85 }}
-              whileHover={{ y: -6, scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <div className="event-row-date">
-                <span className="event-row-day" style={{ fontSize: '1.8rem' }}>--</span>
-                <span className="event-row-month" style={{ fontSize: '0.75rem' }}>July 2026</span>
-              </div>
-              <div className="event-row-info">
-                <h3 style={{ fontSize: '1.3rem' }}>COMING SOON</h3>
-                <div className="event-row-details">
-                  <span><MapPin size={13} /> Melbourne</span>
-                  <span>•</span>
-                  <span>New Experience</span>
-                </div>
-              </div>
-              <div className="event-row-cta">
-                <Link to="/contact" className="btn btn-outline" style={{ padding: '0.6rem 1.2rem', fontSize: '0.8rem' }}>
-                  JOIN WAITLIST
-                </Link>
-              </div>
-            </framerMotion.div>
-
-            {/* Event 3 */}
-            <framerMotion.div 
-              variants={fadeInUp} 
-              className="event-row-card glass-card" 
-              style={{ opacity: 0.85 }}
-              whileHover={{ y: -6, scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <div className="event-row-date">
-                <span className="event-row-day" style={{ fontSize: '1.8rem' }}>--</span>
-                <span className="event-row-month" style={{ fontSize: '0.75rem' }}>August 2026</span>
-              </div>
-              <div className="event-row-info">
-                <h3 style={{ fontSize: '1.3rem' }}>COMING SOON</h3>
-                <div className="event-row-details">
-                  <span><MapPin size={13} /> Australia</span>
-                  <span>•</span>
-                  <span>New Experience</span>
-                </div>
-              </div>
-              <div className="event-row-cta">
-                <Link to="/contact" className="btn btn-outline" style={{ padding: '0.6rem 1.2rem', fontSize: '0.8rem' }}>
-                  JOIN WAITLIST
-                </Link>
-              </div>
-            </framerMotion.div>
-          </framerMotion.div>
-        </div>
-      </section>
-
-      {/* SECTION 6 — THE EXPERIENCE */}
-      <section className="section-experience section-dark">
-        <div className="ambient-glow-bg"></div>
-        <div className="container">
-          <div className="section-header">
-            <h2 className="text-gradient-gold">THE EXPERIENCE</h2>
-            <p style={{ fontSize: '0.9rem' }}>Every detail is engineered to deliver elite-level entertainment.</p>
-          </div>
-
-          <framerMotion.div 
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="experience-grid"
-          >
-            <framerMotion.div 
-              variants={fadeInUp} 
-              className="experience-card glass-card"
-              whileHover={{ y: -6, scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <div className="experience-card-icon"><Music size={24} /></div>
-              <h3 style={{ fontSize: '1.1rem' }}>MUSIC</h3>
-              <p style={{ fontSize: '0.8rem', lineHeight: '1.5' }}>Curated soundscapes fusing Bollywood, Punjabi, House, and Hard Techno.</p>
-            </framerMotion.div>
-
-            <framerMotion.div 
-              variants={fadeInUp} 
-              className="experience-card glass-card"
-              whileHover={{ y: -6, scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <div className="experience-card-icon"><Sparkles size={24} /></div>
-              <h3 style={{ fontSize: '1.1rem' }}>ATMOSPHERE</h3>
-              <p style={{ fontSize: '0.8rem', lineHeight: '1.5' }}>Bespoke visuals, custom laser setups, and immersive lighting systems.</p>
-            </framerMotion.div>
-
-            <framerMotion.div 
-              variants={fadeInUp} 
-              className="experience-card glass-card"
-              whileHover={{ y: -6, scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <div className="experience-card-icon"><Users size={24} /></div>
-              <h3 style={{ fontSize: '1.1rem' }}>COMMUNITY</h3>
-              <p style={{ fontSize: '0.8rem', lineHeight: '1.5' }}>Connecting hundreds of South Asian music lovers across Australia.</p>
-            </framerMotion.div>
-
-            <framerMotion.div 
-              variants={fadeInUp} 
-              className="experience-card glass-card"
-              whileHover={{ y: -6, scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <div className="experience-card-icon"><Flame size={24} /></div>
-              <h3 style={{ fontSize: '1.1rem' }}>ENERGY</h3>
-              <p style={{ fontSize: '0.8rem', lineHeight: '1.5' }}>High-tempo nightlife moments that stay with you long after the doors close.</p>
-            </framerMotion.div>
-          </framerMotion.div>
-        </div>
-      </section>
-
-      {/* SECTION 7 — GALLERY (PAST MOMENTS) */}
+      {/* SECTION 7 — EVENT HIGHLIGHTS */}
       <section className="section-gallery">
         <div className="ambient-glow-bg"></div>
         <div className="container">
           <div className="section-header">
-            <h2 className="text-gradient-rose">PAST MOMENTS</h2>
-            <p style={{ fontSize: '0.9rem' }}>Snapshots of our visual production, music selectors, and community.</p>
+            <h2 className="text-gradient-rose">EVENT HIGHLIGHTS</h2>
+            <p style={{ fontSize: '0.9rem' }}>A collection of moments from previous KULTURE HOUSE experiences.</p>
           </div>
 
-          <div className="gallery-grid">
+          <div className="gallery-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
             <framerMotion.div 
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -521,115 +297,77 @@ export default function Home() {
                 <span className="gallery-caption">On The Decks</span>
               </div>
             </framerMotion.div>
-
-            <framerMotion.div 
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="gallery-item col-8"
-            >
-              <img src="/gallery_lasers.jpg" alt="Amber laser beam visual stage production setup" />
-              <div className="gallery-hover">
-                <span className="gallery-caption">Bespoke Laser Production</span>
-              </div>
-            </framerMotion.div>
-
-            <framerMotion.div 
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="gallery-item col-4"
-            >
-              <img src="/technowood_poster.jpg" alt="Technowood Event Launch Poster Melbourne" />
-              <div className="gallery-hover">
-                <span className="gallery-caption">Technowood Melbourne</span>
-              </div>
-            </framerMotion.div>
           </div>
 
           <div className="gallery-actions">
-            <Link to="/gallery" className="btn btn-outline">VIEW GALLERY</Link>
+            <Link to="/gallery" className="btn btn-outline">VIEW ALL</Link>
           </div>
         </div>
       </section>
 
-      {/* SECTION 8 — INSTAGRAM FEED */}
+      {/* SECTION 8 — SOCIAL MEDIA */}
       <section className="section-instagram section-dark">
         <div className="ambient-glow-bg"></div>
         <div className="container">
           <div className="section-header">
-            <h2 className="text-gradient-rose">FOLLOW THE MOVEMENT</h2>
-            <p style={{ fontSize: '0.9rem' }}>Catch highlights, reels, and updates direct from our Instagram channel.</p>
+            <h2 className="text-gradient-rose">FOLLOW US ON SOCIAL MEDIA</h2>
+            <p style={{ fontSize: '0.9rem' }}>Stay connected for event announcements, highlights, and upcoming experiences.</p>
           </div>
 
-          <div className="insta-grid">
-            <div className="insta-item">
-              <img src="/about_crowd.jpg" alt="Kulture House energetic crowd visual on instagram" />
-              <div className="insta-overlay">
-                <div className="insta-icon-container">
-                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div className="insta-item">
-              <img src="/gallery_dj.jpg" alt="DJ CDJ decks mixing highlight on instagram" />
-              <div className="insta-overlay">
-                <div className="insta-icon-container">
-                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div className="insta-item">
-              <img src="/gallery_lasers.jpg" alt="Concert stage laser lights visual on instagram" />
-              <div className="insta-overlay">
-                <div className="insta-icon-container">
-                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div className="insta-item">
-              <img src="/technowood_poster.jpg" alt="Technowood Melbourne launch ticket update on instagram" />
-              <div className="insta-overlay">
-                <div className="insta-icon-container">
-                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="insta-actions">
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginTop: '2rem' }}>
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/kulturehouse.au" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn btn-outline"
+              style={{ padding: '0.8rem 1.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
             >
-              FOLLOW @KULTUREHOUSE
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              INSTAGRAM
+            </a>
+            <a 
+              href="https://www.tiktok.com/@kulturehouse.au" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-outline"
+              style={{ padding: '0.8rem 1.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+            >
+              <svg 
+                viewBox="0 0 24 24" 
+                width="20" 
+                height="20" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                fill="none" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              >
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg>
+              TIKTOK
+            </a>
+            <a 
+              href="https://www.facebook.com/kulturehouse.au" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-outline"
+              style={{ padding: '0.8rem 1.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+            >
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+              FACEBOOK
             </a>
           </div>
         </div>
       </section>
 
-      {/* SECTION 8.5 — PARTNERSHIPS */}
-      <section className="section-partnerships" id="partnerships" style={{ paddingBottom: '3rem' }}>
+      {/* NEW SECTION — JOIN OUR TEAM */}
+      <section className="section-join-team" style={{ paddingBottom: '3rem' }}>
         <div className="ambient-glow-bg"></div>
         <div className="container">
           <framerMotion.div 
@@ -640,18 +378,44 @@ export default function Home() {
             className="glass-card partnership-card"
           >
             <div className="partnership-glow" />
-            <span className="spotlight-tag" style={{ marginBottom: '1rem', display: 'inline-block' }}>COLLABORATION GOALS</span>
-            <h2 className="text-gradient-gold" style={{ fontSize: '2rem', marginBottom: '1.5rem', fontWeight: 800 }}>BRAND & VENUE PARTNERSHIPS</h2>
-            <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem', lineHeight: '1.8', maxWidth: '650px', margin: '0 auto 2.5rem' }}>
-              We partner with premium brands, high-end venues, and national sponsors to construct unforgettable cultural events and nightlife showcases across Australia. Whether it is a brand activation, custom takeover, or sponsor integration, let's create something extraordinary.
+            <h2 className="text-gradient-gold" style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: 800 }}>JOIN OUR TEAM</h2>
+            <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem', lineHeight: '1.8', maxWidth: '650px', margin: '0 auto 2rem' }}>
+              Interested in content creation, marketing, photography, videography, event operations, or promoters? Join the KULTURE HOUSE team and help create unforgettable experiences.
             </p>
             <div className="partnership-cta-wrapper">
-              <span className="partnership-cta-tag">GET IN TOUCH</span>
+              <Link 
+                to="/contact" 
+                className="btn btn-primary btn-glow partnership-email-btn"
+              >
+                JOIN THE TEAM
+              </Link>
+            </div>
+          </framerMotion.div>
+        </div>
+      </section>
+
+      {/* SECTION 8.5 — PARTNERSHIPS */}
+      <section className="section-partnerships" id="partnerships" style={{ paddingBottom: '3rem', paddingTop: '1rem' }}>
+        <div className="ambient-glow-bg"></div>
+        <div className="container">
+          <framerMotion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="glass-card partnership-card"
+          >
+            <div className="partnership-glow" />
+            <h2 className="text-gradient-gold" style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: 800 }}>PARTNERSHIPS</h2>
+            <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem', lineHeight: '1.8', maxWidth: '650px', margin: '0 auto 2rem' }}>
+              Interested in partnering with KULTURE HOUSE? We work with brands, venues, sponsors, and creators to deliver memorable experiences and meaningful collaborations.
+            </p>
+            <div className="partnership-cta-wrapper">
               <a 
                 href="mailto:partners@kulturehouse.com.au" 
                 className="btn btn-primary btn-glow partnership-email-btn"
               >
-                partners@kulturehouse.com.au
+                GET IN TOUCH
               </a>
             </div>
           </framerMotion.div>
@@ -663,8 +427,7 @@ export default function Home() {
         <div className="ambient-glow-bg"></div>
         <div className="container faq-section">
           <div className="section-header">
-            <h2 className="text-gradient-gold">FREQUENTLY ASKED QUESTIONS</h2>
-            <p style={{ fontSize: '0.9rem' }}>Information regarding DJ bookings, tickets, entry policy, and media accreditation.</p>
+            <h2 className="text-gradient-gold">FAQ</h2>
           </div>
 
           <div className="faq-list">
