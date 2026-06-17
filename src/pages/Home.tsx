@@ -187,13 +187,12 @@ export default function Home() {
           },
           {
             title: 'KULTURE HOUSE OUTDOOR FEST',
-            dateStr: '15 August 2026',
-            dateValue: '2026-08-15',
+            dateStr: '08 May 2026',
+            dateValue: '2026-05-08',
             venue: 'Riviera Beach Club, Melbourne',
             genres: 'Bollywood • Punjabi • Afro • House • Techno',
             image: '/bolly_to_find.jpeg',
-            status: 'Pre-sale Active',
-            ticketLink: 'https://www.eventbrite.com.au'
+            status: 'Completed'
           },
           {
             title: 'FRIDAY AFFAIR',
@@ -206,13 +205,12 @@ export default function Home() {
           },
           {
             title: 'BOLLYWOOD BASS SYNDICATE',
-            dateStr: '05 September 2026',
-            dateValue: '2026-09-05',
+            dateStr: '17 April 2026',
+            dateValue: '2026-04-17',
             venue: 'Brown Alley, Melbourne',
             genres: 'Bollywood Bass • Trap • Hip-Hop • Punjabi',
             image: '/Bollywood_poster.jpeg',
-            status: 'Announced',
-            ticketLink: 'https://www.eventbrite.com.au'
+            status: 'Completed'
           }
         ];
 

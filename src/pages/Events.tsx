@@ -42,14 +42,13 @@ const EVENTS_DATA: EventItem[] = [
   {
     id: 3,
     title: 'KULTURE HOUSE OUTDOOR FEST',
-    dateStr: '15 August 2026',
-    dateValue: '2026-08-15',
+    dateStr: '08 May 2026',
+    dateValue: '2026-05-08',
     venue: 'Riviera Beach Club, Melbourne',
     genres: 'Bollywood • Punjabi • Afro • House • Techno',
     image: '/bolly_to_find.jpeg',
     description: 'Our first large-scale day-to-night outdoor experience. Multiple stages, international acts, food trucks, and pure curated energy under the sun.',
-    status: 'Pre-sale Active',
-    ticketLink: 'https://www.eventbrite.com.au'
+    status: 'Completed'
   },
   {
     id: 4,
@@ -65,14 +64,13 @@ const EVENTS_DATA: EventItem[] = [
   {
     id: 5,
     title: 'BOLLYWOOD BASS SYNDICATE',
-    dateStr: '05 September 2026',
-    dateValue: '2026-09-05',
+    dateStr: '17 April 2026',
+    dateValue: '2026-04-17',
     venue: 'Brown Alley, Melbourne',
     genres: 'Bollywood Bass • Trap • Hip-Hop • Punjabi',
     image: '/Bollywood_poster.jpeg',
     description: 'Heavy sub-bass meets traditional South Asian instruments. A high-production showcase of bass music engineered for the heavy dancers.',
-    status: 'Announced',
-    ticketLink: 'https://www.eventbrite.com.au'
+    status: 'Completed'
   }
 ];
 
