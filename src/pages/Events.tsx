@@ -35,7 +35,7 @@ const EVENTS_DATA: EventItem[] = [
     dateValue: '2026-06-12',
     venue: 'Chaise Lounge, Melbourne',
     genres: 'Bollywood • Punjabi • Techno • Hard Techno',
-    image: '/technowood_poster.jpg',
+    image: '/technowood_poster.jpeg',
     description: 'Where the high-energy beats of Bollywood and Punjabi meet the dark, heavy rhythms of hard techno. An underground fusion like no other.',
     status: 'Completed'
   },
@@ -46,7 +46,7 @@ const EVENTS_DATA: EventItem[] = [
     dateValue: '2026-08-15',
     venue: 'Riviera Beach Club, Melbourne',
     genres: 'Bollywood • Punjabi • Afro • House • Techno',
-    image: '/gallery_dj.jpg',
+    image: '/bolly_to_find.jpeg',
     description: 'Our first large-scale day-to-night outdoor experience. Multiple stages, international acts, food trucks, and pure curated energy under the sun.',
     status: 'Pre-sale Active',
     ticketLink: 'https://www.eventbrite.com.au'
@@ -69,7 +69,7 @@ const EVENTS_DATA: EventItem[] = [
     dateValue: '2026-09-05',
     venue: 'Brown Alley, Melbourne',
     genres: 'Bollywood Bass • Trap • Hip-Hop • Punjabi',
-    image: '/about_crowd.jpg',
+    image: '/Bollywood_poster.jpeg',
     description: 'Heavy sub-bass meets traditional South Asian instruments. A high-production showcase of bass music engineered for the heavy dancers.',
     status: 'Announced',
     ticketLink: 'https://www.eventbrite.com.au'
